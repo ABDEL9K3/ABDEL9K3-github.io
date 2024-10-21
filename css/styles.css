@@ -1,17 +1,26 @@
+/* styles.css */
+
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Text color */
 }
 
+/* Header */
 header {
-    background: #35424a;
+    background: #35424a; /* Dark color for header */
     color: #ffffff;
     padding: 20px;
     text-align: center;
+}
+
+/* Navigation */
+nav {
+    margin: 20px 0;
 }
 
 nav ul {
@@ -27,26 +36,49 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #e8491d; /* Hover color */
+}
+
+/* Hero Section */
 .hero {
-    background: url('path/to/your/hero-image.jpg') no-repeat center center;
+    background: url('path/to/your/hero-image.jpg') no-repeat center center; /* Hero background image */
     background-size: cover;
     color: #ffffff;
     padding: 100px 20px;
     text-align: center;
 }
 
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Button Styles */
 .button {
-    background: #e8491d;
+    background: #e8491d; /* Button color */
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
+    transition: background 0.3s;
 }
 
+.button:hover {
+    background: #d7371c; /* Darker on hover */
+}
+
+/* Project Grid */
 .project-grid {
     display: flex;
     flex-wrap: wrap;
@@ -55,42 +87,73 @@ nav ul li a {
 }
 
 .project {
-    background: #fff;
-    padding: 15px;
+    background: #ffffff; /* White background for project cards */
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    width: calc(30% - 40px); /* Responsive width */
+    margin: 20px; /* Space between project cards */
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .project {
+        width: calc(45% - 40px); /* Adjust width for smaller screens */
+    }
 }
 
 @media (max-width: 600px) {
     .project {
-        width: 100%;
+        width: 100%; /* Full width on small screens */
     }
 
     nav ul li {
-        display: block;
-        margin: 5px 0;
+        display: block; /* Stack navigation items */
+        margin: 5px 0; /* Vertical spacing */
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Smaller font size */
+    }
+
+    .hero p {
+        font-size: 1em; /* Smaller paragraph size */
     }
 }
 
+/* Contact Form */
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack form elements vertically */
+    max-width: 600px; /* Max width for form */
+    margin: 20px auto; /* Center the form */
 }
 
 input, textarea {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Spacing between fields */
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1em; /* Font size for inputs */
 }
 
 button {
-    background: #e8491d;
+    background: #e8491d; /* Same button color */
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1em; /* Font size for button */
+    transition: background 0.3s;
 }
+
+button:hover {
+    background: #d7371c; /* Darker button on hover */
+}
+
