@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('path/to/hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.button {
+    background: #e8491d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; // Stack projects on smaller screens
+    }
+}
