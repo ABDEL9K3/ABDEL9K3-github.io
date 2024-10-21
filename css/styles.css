@@ -1,50 +1,75 @@
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Text color */
 }
 
 header {
-    background: #35424a;
+    background: #35424a; /* Dark background for header */
     color: #ffffff;
     padding: 20px;
     text-align: center;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: url('path/to/hero-image.jpg') no-repeat center center;
-    background-size: cover;
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Horizontal list */
+    margin: 0 15px; /* Spacing between items */
+}
+
+nav ul li a {
     color: #ffffff;
+    text-decoration: none; /* Remove underline */
+}
+
+.hero {
+    background: url('path/to/your/hero-image.jpg') no-repeat center center; /* Background image for hero section */
+    background-size: cover; /* Cover the entire section */
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
 }
 
 .button {
-    background: #e8491d;
+    background: #e8491d; /* Button color */
     color: #fff;
     padding: 10px 20px;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
+    display: inline-block; /* Make it a block element */
 }
-
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: space-around; /* Space out projects */
+    margin: 20px; /* Margin around the grid */
 }
 
 .project {
-    background: #fff;
+    background: #fff; /* White background for projects */
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 30%; /* Control the width */
+    margin: 10px; /* Spacing between project cards */
 }
 @media (max-width: 600px) {
-    .hero h2 {
-        font-size: 24px;
+    .project {
+        width: 100%; /* Full width on small screens */
     }
 
-    .project-grid {
-        grid-template-columns: 1fr; // Stack projects on smaller screens
+    nav ul li {
+        display: block; /* Stack navigation items */
+        margin: 5px 0; /* Vertical spacing */
     }
 }
