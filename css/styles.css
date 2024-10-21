@@ -39,15 +39,27 @@ nav ul li a {
     text-align: center;
 }
 
-.button {
-    background: #e8491d; /* Button color */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block; /* Make it a block element */
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
 }
+
+input, textarea {
+    margin-bottom: 10px; /* Spacing between fields */
+    padding: 10px; /* Padding inside fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    background: #e8491d; /* Same button color */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer on hover */
+}
+
 .project-grid {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping to the next line */
