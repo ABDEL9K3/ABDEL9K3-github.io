@@ -1,87 +1,96 @@
-/* styles.css */
-
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background color */
-    color: #333; /* Text color */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #35424a; /* Dark background for header */
+    background: #35424a;
     color: #ffffff;
     padding: 20px;
     text-align: center;
 }
 
 nav ul {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline; /* Horizontal list */
-    margin: 0 15px; /* Spacing between items */
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #ffffff;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .hero {
-    background: url('path/to/your/hero-image.jpg') no-repeat center center; /* Background image for hero section */
-    background-size: cover; /* Cover the entire section */
+    background: url('path/to/your/hero-image.jpg') no-repeat center center;
+    background-size: cover;
     color: #ffffff;
     padding: 100px 20px;
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-}
-
-input, textarea {
-    margin-bottom: 10px; /* Spacing between fields */
-    padding: 10px; /* Padding inside fields */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-}
-
-button {
-    background: #e8491d; /* Same button color */
+.button {
+    background: #e8491d;
     color: #fff;
+    padding: 10px 20px;
     border: none;
-    padding: 10px;
     border-radius: 5px;
-    cursor: pointer; /* Pointer on hover */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .project-grid {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping to the next line */
-    justify-content: space-around; /* Space out projects */
-    margin: 20px; /* Margin around the grid */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
 }
 
 .project {
-    background: #fff; /* White background for projects */
+    background: #fff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 30%; /* Control the width */
-    margin: 10px; /* Spacing between project cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
 }
+
 @media (max-width: 600px) {
     .project {
-        width: 100%; /* Full width on small screens */
+        width: 100%;
     }
 
     nav ul li {
-        display: block; /* Stack navigation items */
-        margin: 5px 0; /* Vertical spacing */
+        display: block;
+        margin: 5px 0;
     }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #e8491d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
